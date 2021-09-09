@@ -1,0 +1,19 @@
+{
+    "name": "smartschool",
+    "description": "Smart School",
+    "license": "Creative Commons Attribution-Share Alike 3.0 United States",
+    "authors": [
+        {
+            "name": "smartschool",
+            "email": "support@qdocs.in"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+           "google/apiclient": "2.7",
+           "league/omnipay": "^3.1@dev",
+           "omnipay/paypal": "^3.0@dev",
+           "omnipay/stripe": "^3.1@dev"
+
+    }
+}
