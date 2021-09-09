@@ -1,0 +1,67 @@
+
+
+ALTER TABLE `student_fees_deposite` ADD COLUMN `proof_filename` VARCHAR(255) NULL AFTER `amount_detail`; 
+
+CREATE TABLE `examtypes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `pubdate` date DEFAULT NULL,
+  `desc` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `examgrades` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `gradepoint` int(11) DEFAULT 0,
+  `pubdate` date DEFAULT NULL,
+  `desc` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+ALTER TABLE `homework` ADD COLUMN `type_id` INT NULL AFTER `document`, ADD COLUMN `grade_id` INT NULL AFTER `type_id`; 
+
+UPDATE students SET firstname = concat(firstname , ' ' , lastname), lastname=''
+UPDATE staff SET staff.name=concat(staff.name , ' ' , staff.surname), staff.surname=''
+
+ALTER TABLE `homework_evaluation` ADD COLUMN `point` FLOAT(10,2) NULL AFTER `date`;
+ALTER TABLE `homework_evaluation` ADD COLUMN `note` TEXT NULL AFTER `point`; 
+
+
+UPDATE `attendence_type` SET `type` = 'permission' WHERE `id` = '3'; 
+UPDATE `attendence_type` SET `type` = 'sick' WHERE `id` = '6'; 
+ALTER TABLE `class_teacher` ADD COLUMN `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP() NULL AFTER `session_id`, ADD COLUMN `updated_at` DATETIME NULL AFTER `created_at`; 
+
+CREATE TABLE `history` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT 0,
+  `user_type` varchar(255) DEFAULT '',
+  `session_id` varchar(255) DEFAULT '',
+  `event_time` varchar(255) DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+ALTER TABLE `chat_messages` ADD COLUMN `deleted` INT(1) DEFAULT 0 NULL AFTER `chat_connection_id`;
+ALTER TABLE `chat_messages` CHANGE `deleted` `deleted1` INT(11) DEFAULT 0 NULL, ADD COLUMN `deleted2` INT(11) DEFAULT 0 NULL AFTER `deleted1`;  
+
+
+-- Half Day -> Sick, Late -> Permission
+UPDATE `attendence_type` SET `type` = 'Sick' WHERE `type` = 'Half Day'; 
+UPDATE `attendence_type` SET `type` = 'Permission' WHERE `type` = 'Late';
+
+-- new added for feed back 20210705
+ALTER TABLE `homework_evaluation` ADD COLUMN `evaluated_by` INT(11) DEFAULT 0 NULL AFTER `status`; 
+
+ALTER TABLE `class_teacher` ADD COLUMN `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP NOT NULL AFTER `session_id`; 
+
+-- new added for feed back 20210706
+ALTER TABLE `homework` ADD COLUMN `exam_name` VARCHAR(255) DEFAULT '' NULL AFTER `subject_id`; 
+
+
+-- 2021.07.16
+ALTER TABLE `send_notification` ADD COLUMN `attached_file` VARCHAR(255) NULL AFTER `visible_parent`, ADD COLUMN `filename` VARCHAR(40) NULL AFTER `attached_file`; 
+ALTER TABLE `smschool`.`send_notification` ADD COLUMN `section_id` INT NULL AFTER `filename`; 

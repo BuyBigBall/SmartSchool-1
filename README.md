@@ -1,2 +1,2 @@
-# SmartSchool-1
-School management system with PHP/CodeIgniter, Mysql
+# Smart School
+ School Management System with PHP/CodeIgniter, MySQL

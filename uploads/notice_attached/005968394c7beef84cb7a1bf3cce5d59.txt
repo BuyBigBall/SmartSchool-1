@@ -1,0 +1,77 @@
+align-items baseline
+appearance none
+background-color rgb(255, 255, 255)
+background-image none
+border-bottom-color rgb(85, 85, 85)
+border-bottom-left-radius 0px
+border-bottom-right-radius 0px
+border-bottom-style none
+border-bottom-width 0px
+border-image-outset 0
+border-image-repeat stretch
+border-image-slice 100%
+border-image-source none
+border-image-width 1
+border-left-color rgb(85, 85, 85)
+border-left-style none
+border-left-width 0px
+border-right-color rgb(85, 85, 85)
+border-right-style none
+border-right-width 0px
+border-top-color rgb(85, 85, 85)
+border-top-left-radius 0px
+border-top-right-radius 0px
+border-top-style none
+border-top-width 0px
+box-shadow none
+box-sizing border-box
+color rgb(85, 85, 85)
+cursor default
+display block
+font-family Roboto, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+font-size 13.3333px
+font-stretch 100%
+font-style normal
+font-variant-caps normal
+font-variant-east-asian normal
+font-variant-ligatures normal
+font-variant-numeric normal
+font-weight 400
+height 28px
+letter-spacing normal
+line-height 19.0476px
+margin-bottom 0px
+margin-left 0px
+margin-right 0px
+margin-top 5px
+opacity 0
+outline-color rgb(85, 85, 85)
+outline-style none
+outline-width 0px
+overflow-x hidden
+overflow-y hidden
+padding-bottom 0px
+padding-left 12px
+padding-right 12px
+padding-top 0px
+text-align start
+text-indent 0px
+text-overflow ellipsis
+text-rendering auto
+text-shadow none
+text-size-adjust 100%
+text-transform none
+transition-delay 0s, 0s
+transition-duration 0.15s, 0.15s
+transition-property border-color, box-shadow
+transition-timing-function ease-in-out, ease-in-out
+white-space pre
+width 415.5px
+word-spacing 0px
+writing-mode horizontal-tb
+-webkit-font-smoothing antialiased
+-webkit-rtl-ordering logical
+-webkit-tap-highlight-color rgba(0, 0, 0, 0)
+-webkit-border-image none
+Rendered Fonts
+Roboto—Network resource(14 glyphs)
